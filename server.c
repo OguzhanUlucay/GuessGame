@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>    // for strlen
 
-#define client_count 5
+#define client_count 2
 
 void game(int number_to_find, char *client_names[],int client_socket[]);
 int find_random();
@@ -63,6 +63,7 @@ int main(int argc, char *argv[])
 
         printf("%s logged in\n",buffer_respond );
         client_names[number_client] = (char *)malloc(50);
+        strcpy(client_names[number_client], buffer_respond);
 
         if(number_client == (client_count-1)){
             printf("\ngame is starting\n\n");

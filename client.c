@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
     /*------------------Guessing Ends-----------*/
 
 
-    puts("The End of client");
+    //puts("The End of client");
     close(socket_description);
 
 
@@ -127,7 +127,7 @@ int check_input_for_int(char *buffer)
             if(*other_part_of_string != '\0'){  //this is for if there is additional char character in the input after number.
                 printf("Please enter only digits!\n");
             }else {
-                if( guess > 100 || guess < 0){//check if it below 100 or above 0
+                if( guess > 99 || guess < 0){//check if it below 100 or above 0
                     printf("Please enter max. 2 digit number or min val. = 11\n");
                 }else return guess;
             }
