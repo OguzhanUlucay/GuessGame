@@ -115,7 +115,9 @@ void game(int number_to_find, char *client_names[], int client_socket[])
 
     while(client_guess != number_to_find)
     {
-        round++;
+
+        if(number_client == 0)round++;
+        
         //printf("We are in the loop captain\n");
         printf("Round %d, %s's turn \n",round,client_names[number_client]);
 
